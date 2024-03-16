@@ -10,7 +10,7 @@ This is a basic example of a use case for Buildx with Docker Compose
 
 #### Localhost:
 ```bash
-docker buildx bake --pull
+docker buildx bake --load
 ```
 
 or
