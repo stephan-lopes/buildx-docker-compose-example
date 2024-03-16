@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  web:
+    image: kevenlopes/docker-compose-test
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      x-bake:
+        platforms:
+          - linux/amd64
+          - linux/arm64
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    environment:
+      - NAME=World
